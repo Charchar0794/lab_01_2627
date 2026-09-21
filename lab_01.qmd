@@ -65,12 +65,19 @@ When `quarto` compiles this document to HTML or PDF, the code is run, and the ou
 :::
 
 ```{r}
+# load tidyverse
 library(tidyverse)
+# read data from penguins.csv then store the result in penguins
 penguins <- read_csv("data/penguins.csv")
+# show the first few rows of the data
 head(penguins)
+# summarized basic statistical characteristic of penguin data
 summary(penguins)
+# plot a scatter graph 
 ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +
+  # draw the observations as points
   geom_point() +
+  # give the graph a clean visual style
   theme_minimal()
 ```
 
