@@ -168,11 +168,86 @@ ggplot(penguins, aes(x = island, fill = species)) +
   # give the graph a clean visual style
   theme_minimal()
 ```
-- [ ] What is the most useful measurement or measurements to distinguish different species of penguin?
 
+- [x] What is the most useful measurement or measurements to distinguish different species of penguin?
 
+```{r}
+# load tidyverse
+library(tidyverse)
+# read data from penguins.csv then store the result in penguins
+penguins <- read_csv("data/penguins.csv")
+# show the first few rows of the data
+head(penguins)
+# summarized basic statistical characteristic of penguin data
+summary(penguins)
+# plot a box chart 
+ggplot(penguins, aes(x = species, y = bill_length_mm)) +
+  # draw the observations
+  geom_boxplot() +
+  # give the graph a clean visual style
+  theme_minimal()
+
+ggplot(penguins, aes(x = species, y = bill_depth_mm)) +
+  # draw the observations
+  geom_boxplot() +
+  # give the graph a clean visual style
+  theme_minimal()
+
+ggplot(penguins, aes(x = species, y = flipper_length_mm)) +
+  # draw the observations
+  geom_boxplot() +
+  # give the graph a clean visual style
+  theme_minimal()
+
+ggplot(penguins, aes(x = species, y = body_mass_g)) +
+  # draw the observations
+  geom_boxplot() +
+  # give the graph a clean visual style
+  theme_minimal()
+
+#combined bill length and flipper length due to no obvious difference between boxes
+ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = species)) +
+  # draw the observations as points
+  geom_point() +
+  # give the graph a clean visual style
+  theme_minimal()
+```
 
 - [ ] Do the measurements given vary significantly with the penguin's genders?
 
+```{r}
+# load tidyverse
+library(tidyverse)
+# read data from penguins.csv then store the result in penguins
+penguins <- read_csv("data/penguins.csv")
+# show the first few rows of the data
+head(penguins)
+# summarized basic statistical characteristic of penguin data
+summary(penguins)
+# plot a box chart 
+ggplot(penguins, aes(x = sex, y = bill_length_mm)) +
+  # draw the observations
+  geom_boxplot() +
+  # give the graph a clean visual style
+  theme_minimal()
+
+ggplot(penguins, aes(x = sex, y = bill_depth_mm)) +
+  # draw the observations
+  geom_boxplot() +
+  # give the graph a clean visual style
+  theme_minimal()
+
+ggplot(penguins, aes(x = sex, y = flipper_length_mm)) +
+  # draw the observations
+  geom_boxplot() +
+  # give the graph a clean visual style
+  theme_minimal()
+
+ggplot(penguins, aes(x = sex, y = body_mass_g)) +
+  # draw the observations
+  geom_boxplot() +
+  # give the graph a clean visual style
+  theme_minimal()
+```
 
 
