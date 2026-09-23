@@ -150,6 +150,29 @@ From now on I won't remind you to do this - you should get into the habit of doi
 
 Produce plots to answer the following research questions:
 
-- [ ] On which island are we most likely to find which penguins?
+- [x] On which island are we most likely to find which penguins?
+
+```{r}
+# load tidyverse
+library(tidyverse)
+# read data from penguins.csv then store the result in penguins
+penguins <- read_csv("data/penguins.csv")
+# show the first few rows of the data
+head(penguins)
+# summarized basic statistical characteristic of penguin data
+summary(penguins)
+# plot a bar chart x and y represent island and count respectively 
+ggplot(penguins, aes(x = island, fill = species)) +
+  # draw the observations as bar
+  geom_bar(position = "dodge") +
+  # give the graph a clean visual style
+  theme_minimal()
+```
 - [ ] What is the most useful measurement or measurements to distinguish different species of penguin?
+
+
+
 - [ ] Do the measurements given vary significantly with the penguin's genders?
+
+
+
