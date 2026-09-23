@@ -80,6 +80,7 @@ ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +
   # give the graph a clean visual style
   theme_minimal()
 ```
+`The scatter plot above represent "Adelie" "Chinstrap" and "Gentoo" in red green and blue respectively. "Adelie" and "Chrinstrap" have simmilar body mass and flipper length. The body mass for most "Adelie" is in the range of 2800 g to 4800g, almost same with "Chrinstrap"; the flipper lenth for "Adelie" is in the range of 172mm to 210mm, and this range us slightly lower than "Chrinstrap". For "Genntoo", it have havier mass and larger length compare with the other two. Overall, the plot shows a positive correlation, in this case which means the penguin with longger flipper length generally tend to have higher body mass .`
 
 ### Tricks for Reproducibility
 
@@ -95,8 +96,8 @@ print("Hello world!")  # We can also add comments at the end of lines.
 
 ### Task 2 
 
-- [ ] Add comments before each line of code in the blocks above, explaining what is happening on each line.
-- [ ] Add some interpretation of the plot (in `markdown`, not as comments), after the code block.
+- [x] Add comments before each line of code in the blocks above, explaining what is happening on each line.
+- [x] Add some interpretation of the plot (in `markdown`, not as comments), after the code block.
 - [ ] Create a second plot, below, that colours the dots by sex instead of by species.
 
 If you don't know how to do something in `R` you have a few options:
